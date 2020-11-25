@@ -168,8 +168,8 @@ def loadStaticMediaTVShows(metadata, media):
 class StaticMediaAgent(Agent.Movies):
   name = 'Static Media'
   languages = [Locale.Language.NoLanguage]
-  primary_provider = True
-  accepts_from = ['com.plexapp.agents.localmedia']
+  primary_provider = False
+  contributes_to = ['com.plexapp.agents.none']
 
   def search(self, results, media, lang):
     Log('[STATIC] Searching for %s' % media.name)
@@ -181,8 +181,8 @@ class StaticMediaAgent(Agent.Movies):
 class StaticMediaAgent(Agent.TV_Shows):
   name = 'Static Media'
   languages = [Locale.Language.NoLanguage]
-  primary_provider = True
-  accepts_from = ['com.plexapp.agents.localmedia']
+  primary_provider = False
+  contributes_to = ['com.plexapp.agents.none']
 
   def search(self, results, media, lang):
     Log('[STATIC] Searching for %s' % media.show)
